@@ -1,0 +1,25 @@
+const std = @import("std");
+const FileLineReader = @import("utils.zig").FileLineReader;
+const Result = @import("utils.zig").Result;
+
+pub fn dayNN(allocator: std.mem.Allocator, reader: *FileLineReader) anyerror!Result {
+    var result: Result = std.mem.zeroes(Result);
+
+    var n: u32 = 0;
+
+    while (try reader.next()) |line| : (n += 1) {
+        
+    }
+
+    return result;
+}
+
+const testResult = @import("utils.zig").testResult;
+
+test "dayNN - Part 1" {
+    try testResult("dayNN.txt", dayNN, .Part1, 0);
+}
+
+test "dayNN - Part 2" {
+    try testResult("dayNN.txt", dayNN, .Part2, 0);
+}
